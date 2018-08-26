@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>hello slides</title>
+<title>SHINE slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11906,7 +11906,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>jupyter nbconvert hello.ipynb --to slides --reveal-prefix '<a href="https://cdn.bootcss.com/reveal.js/3.5.0">https://cdn.bootcss.com/reveal.js/3.5.0</a>' --output hello</p>
+<p>jupyter nbconvert hello.ipynb --to slides --reveal-prefix '<a href="https://cdn.bootcss.com/reveal.js/3.5.0">https://cdn.bootcss.com/reveal.js/3.5.0</a>' --output SHINE</p>
 
 </div>
 </div>
@@ -12004,7 +12004,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>這邊我們使用google的api來分析一段話，像是因為川普太帥了所以我討厭他，得到的分數是正的0.8，代表我們這句話有開心的情緒。
+<p>這邊我們使用google的api來分析一段話，像是因為川普太帥了所以我討厭他，情緒的分數介於-1~+1，得到的分數是正的0.8，代表我們這句話有開心的情緒。
 但會不會講這句話的人其實真的很討厭川普也說不定，恐怕也只有他本人才知道！</p>
 
 </div>
@@ -12169,7 +12169,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>首先要介紹什麼是autoencoder，他是神經網路的一種，常用在維度縮減上，可以想像是濃縮精華的意思，好處是可以避免資料維度太大，近一步縮減訓練的時間。譬如我們輸入一張奇諾的照片，經過編碼得到濃縮後的資料，在解碼成為一張比較沒有這麼生動的照片，所以我們透過誤差反向傳遞，經過一次次的訓練，
 縮減原始照片和解碼後的照片的誤差，最後將使得兩張照片幾乎長得一模一樣，肉眼難以分辨～
-直得注意的是autoencoder一個半監督式學習，如果壓縮後的資料本身沒有意義那就是非監督，如果壓娑後的資料本身有意義的話就變成監督是學習了，可以進一步計算他得預測準確率。</p>
+直得注意的是autoencoder一個半監督式學習，如果壓縮後的資料本身沒有意義那就是非監督，如果壓娑後的資料本身有意義的話就變成監督是學習了，可以進一步和label進行比較。</p>
 
 </div>
 </div>
