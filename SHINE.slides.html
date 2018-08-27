@@ -11906,7 +11906,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>jupyter nbconvert hello.ipynb --to slides --reveal-prefix '<a href="https://cdn.bootcss.com/reveal.js/3.5.0">https://cdn.bootcss.com/reveal.js/3.5.0</a>' --output SHINE</p>
+<p>jupyter nbconvert SHINE.ipynb --to slides --reveal-prefix '<a href="https://cdn.bootcss.com/reveal.js/3.5.0">https://cdn.bootcss.com/reveal.js/3.5.0</a>' --output SHINE</p>
 
 </div>
 </div>
@@ -12133,7 +12133,9 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Target</h1></p>
-<p>Use SHINE to predict the sentiment link from the user to celebrities.</p>
+<p>Use SHINE to predict the sentiment link from the user to celebrities.</p><hr>
+<li>Heterogeneous info</li>
+<li>Cold start scenario</li>
 </div>
 </div>
 </div><aside class="notes">
@@ -12324,12 +12326,12 @@ SHINE在誤差反向傳遞中加入很多懲罰項，譬如情緒網路、社交
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>這邊我們和5個不同的方法進行比較！
-首先是LINE他可以計算一階和二階的相似度。
-第二個Node2vec透過BFS和DFS逐步拜訪機率最大的節點。
-第三個SDNE則是透過深度網路來避免局部最佳解。
-再來是FxG可以計算分類的效度和信度。
-最後是LIBFM利用特徵工程的方法進行分類。
+<p>這邊我們和5個不同的分類方法進行比較！
+首先是LINE他透過計算節點之間一階和二階的相似度，找出梯度下降中誤差最小的點。
+第二個Node2vec利用BFS和DFS逐步拜訪機率最大的節點，透過random work在局部和全局最佳解中找到平衡。
+第三個SDNE是半監督式學習的方法，利用autoencoder深度網路中非線性的激勵函數來避免局部最佳解。
+再來是FxG可以計算分類的效度和信度，因為無法使用節點的其他資訊，所以這邊只有計算情緒網路的部分。
+最後是LIBFM利用特徵工程的因子分解的方法進行分類，能有效解決資料稀疏的問題，常用於推薦系統。
 要注意的是前面三個方法不能直接用在異構網路，所以我們分別對不同的網路進行計算，最後再將它們的結果合併！</p>
 
 </div>
